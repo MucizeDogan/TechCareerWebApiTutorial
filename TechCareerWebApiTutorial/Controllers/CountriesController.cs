@@ -22,9 +22,7 @@ namespace TechCareerWebApiTutorial.Controllers {
 
         [HttpGet("{sayi}")]
         public IActionResult GetCountries(int sayi) {
-            var secilen = new string[sayi];
-            Array.Copy(countries, secilen, sayi);
-
+            var secilen =countries.Take(sayi).ToArray();
             return Ok(secilen);
         }
 
