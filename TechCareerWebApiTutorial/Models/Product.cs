@@ -1,12 +1,10 @@
 ﻿namespace TechCareerWebApiTutorial.Models {
     public class Product {
 
-        public Product(string name, int id, double unitPrice,int cID, string cName) {
+        public Product(string name, int id, double unitPrice) {
             this.Name = name;
             this.ID = id;
             this.UnitPrice = unitPrice;
-            this.category.ID = cID;
-            this.category.Name = cName;
         }
 
         public int ID{ get; set; }
